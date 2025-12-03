@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 225 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 225 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 225 15% 15%;
+
+    /* Royal Blue as primary */
+    --primary: 225 73% 57%;
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 225 73% 45%;
+    
+    /* Gold as accent */
+    --accent: 51 100% 50%;
+    --accent-foreground: 225 15% 15%;
+    --accent-dark: 45 100% 45%;
+
+    --secondary: 225 20% 95%;
+    --secondary-foreground: 225 73% 57%;
+
+    --muted: 225 15% 95%;
+    --muted-foreground: 225 10% 45%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 225 15% 88%;
+    --input: 225 15% 88%;
+    --ring: 225 73% 57%;
+
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(225 73% 57%), hsl(225 73% 45%));
+    --gradient-accent: linear-gradient(135deg, hsl(51 100% 50%), hsl(45 100% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(225 73% 20% / 0.95), hsl(225 73% 45% / 0.9));
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(51 100% 50% / 0.3);
+    --shadow-elegant: 0 10px 30px -10px hsl(225 73% 57% / 0.3);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 225 25% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 225 20% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 225 20% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 225 73% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-dark: 225 73% 50%;
+
+    --accent: 51 100% 55%;
+    --accent-foreground: 225 25% 8%;
+    --accent-dark: 45 100% 50%;
+
+    --secondary: 225 20% 18%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 225 15% 20%;
+    --muted-foreground: 225 10% 65%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 225 15% 22%;
+    --input: 225 15% 22%;
+    --ring: 225 73% 60%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(225 73% 15% / 0.95), hsl(225 73% 30% / 0.9));
+    --shadow-glow: 0 0 40px hsl(51 100% 55% / 0.25);
+    --shadow-elegant: 0 10px 30px -10px hsl(225 73% 60% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-['Poppins',sans-serif];
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+}
+
+@layer utilities {
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+  
+  .hover-glow {
+    @apply transition-shadow duration-300;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+  
+  .section-padding {
+    @apply py-20 px-4 md:px-8 lg:px-16;
+  }
+}
