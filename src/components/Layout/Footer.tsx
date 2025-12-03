@@ -36,7 +36,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=100091811124759"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"

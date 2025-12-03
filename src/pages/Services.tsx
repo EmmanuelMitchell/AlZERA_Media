@@ -18,7 +18,7 @@ import {
 import { Button } from "@/components/ui/button";
 
 const Services = () => {
-  const whatsappNumber = "232XXXXXXXXX";
+  const whatsappNumber = "23276983446";
 
   const services = [
     {
