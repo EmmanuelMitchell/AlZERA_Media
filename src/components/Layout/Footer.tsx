@@ -110,7 +110,7 @@ const Footer = () => {
                 className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Phone size={18} />
-                <span>+232 XX XXX XXXX</span>
+                <span>+23276983446</span>
               </a>
             </div>
           </div>
